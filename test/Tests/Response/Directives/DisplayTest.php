@@ -1,5 +1,7 @@
 <?php
 
+namespace MaxBeckers\AmazonAlexa\Tests;
+
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\HintDirective;
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\Image;
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\ImageSource;
@@ -8,6 +10,7 @@ use MaxBeckers\AmazonAlexa\Response\Directives\Display\Template;
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\Text;
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\TextContent;
 use PHPUnit\Framework\TestCase;
+use ArrayObject;
 
 /**
  * @author Fabian Graßl <fabian.grassl@db-n.com>

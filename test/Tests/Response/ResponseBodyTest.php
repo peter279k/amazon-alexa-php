@@ -2,13 +2,13 @@
 
 namespace MaxBeckers\AmazonAlexa\Tests;
 
+use ArrayObject;
 use MaxBeckers\AmazonAlexa\Response\Card;
 use MaxBeckers\AmazonAlexa\Response\Directives\Display\RenderTemplateDirective;
 use MaxBeckers\AmazonAlexa\Response\OutputSpeech;
 use MaxBeckers\AmazonAlexa\Response\Reprompt;
 use MaxBeckers\AmazonAlexa\Response\ResponseBody;
 use PHPUnit\Framework\TestCase;
-use ArrayObject;
 
 /**
  * @author Fabian Graßl <fabian.grassl@db-n.com>

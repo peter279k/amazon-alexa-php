@@ -2,10 +2,10 @@
 
 namespace MaxBeckers\AmazonAlexa\Tests;
 
+use ArrayObject;
 use MaxBeckers\AmazonAlexa\Response\Card;
 use MaxBeckers\AmazonAlexa\Response\CardImage;
 use PHPUnit\Framework\TestCase;
-use ArrayObject;
 
 /**
  * @author Maximilian Beckers <beckers.maximilian@gmail.com>

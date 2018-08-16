@@ -30,7 +30,6 @@ abstract class AudioPlayerRequest extends AbstractRequest
     protected function setRequestData(array $amazonRequest)
     {
         $this->requestId = $amazonRequest['requestId'];
-        $this->timestamp = new \DateTime($amazonRequest['timestamp']);
         //Workaround for amazon developer console sending unix timestamp
         try {
             $this->timestamp = new \DateTime($amazonRequest['timestamp']);

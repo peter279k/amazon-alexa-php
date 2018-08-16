@@ -44,10 +44,10 @@ class IntentRequestTest extends TestCase
 
     public function testIntentRequestWithNumericTimestamp()
     {
-        $requestBody = json_decode(file_get_contents(__DIR__.'/RequestData/intent.json'), true);
-        $requestBody['request']['timestamp'] = 655459003;;
-        $requestBody = json_encode($requestBody);
-        $request     = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
+        $requestBody                         = json_decode(file_get_contents(__DIR__.'/RequestData/intent.json'), true);
+        $requestBody['request']['timestamp'] = 655459003;
+        $requestBody                         = json_encode($requestBody);
+        $request                             = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
         $this->assertInstanceOf(IntentRequest::class, $request->request);
         $this->assertSame('my-application-id', $request->context->system->application->applicationId);
     }

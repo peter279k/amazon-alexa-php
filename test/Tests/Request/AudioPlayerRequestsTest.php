@@ -52,10 +52,10 @@ class AudioPlayerRequestsTest extends TestCase
 
     public function testPlaybackFinishedRequestWithNumericTimestamp()
     {
-        $requestBody = json_decode(file_get_contents(__DIR__.'/RequestData/audioplayerPlaybackFailed.json'), true);
+        $requestBody                         = json_decode(file_get_contents(__DIR__.'/RequestData/audioplayerPlaybackFailed.json'), true);
         $requestBody['request']['timestamp'] = 655459003;
-        $requestBody = json_encode($requestBody);
-        $request     = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
+        $requestBody                         = json_encode($requestBody);
+        $request                             = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
         $this->assertInstanceOf(PlaybackFailedRequest::class, $request->request);
     }
 }

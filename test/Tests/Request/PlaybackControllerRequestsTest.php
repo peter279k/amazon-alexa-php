@@ -44,11 +44,11 @@ class PlaybackControllerRequestsTest extends TestCase
 
     public function testPreviousCommandIssuedWithNumericTimestamp()
     {
-        $requestBody = file_get_contents(__DIR__.'/RequestData/playbackcontrollerPreviousCommandIssued.json');
-        $requestBody = json_decode($requestBody, true);
+        $requestBody                         = file_get_contents(__DIR__.'/RequestData/playbackcontrollerPreviousCommandIssued.json');
+        $requestBody                         = json_decode($requestBody, true);
         $requestBody['request']['timestamp'] = 655459003;
-        $requestBody = json_encode($requestBody);
-        $request     = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
+        $requestBody                         = json_encode($requestBody);
+        $request                             = Request::fromAmazonRequest($requestBody, 'https://s3.amazonaws.com/echo.api/echo-api-cert.pem', 'signature');
         $this->assertInstanceOf(PreviousCommandIssued::class, $request->request);
     }
 }
